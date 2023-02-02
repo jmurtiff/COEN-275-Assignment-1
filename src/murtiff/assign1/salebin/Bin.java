@@ -14,7 +14,7 @@ public class Bin implements BinType {
 	
 	protected ItemType items[];
 	
-	protected int currentitemsLength;
+	protected int currentItemsLength;
 	
 	protected static double maxWeight = 10.0;
 	
@@ -24,7 +24,7 @@ public class Bin implements BinType {
 	public Bin()
 	{
 		items = new ItemType [10];
-		currentitemsLength = 0;
+		currentItemsLength = 0;
 		binNumber = "A" + generateBinNumber();
 	}
 	
@@ -37,7 +37,7 @@ public class Bin implements BinType {
 	public double getWeight()
 	{
 		double totalWeight = 0.0;
-		for (int i = 0; i < currentitemsLength; i++)
+		for (int i = 0; i < currentItemsLength; i++)
 		{
 			totalWeight += items[i].getWeight();
 		}
@@ -53,8 +53,8 @@ public class Bin implements BinType {
 		//
 		if(item.getWeight() + getWeight() <= maxWeight)
 		{
-			items[currentitemsLength] = item;
-			currentitemsLength = currentitemsLength + 1;
+			items[currentItemsLength] = item;
+			currentItemsLength = currentItemsLength + 1;
 		}
 		else
 		{
@@ -65,7 +65,7 @@ public class Bin implements BinType {
 	public USMoney calculatePrice()
 	{
 		USMoney totalPrice = new USMoney(0,0);
-		for (int i = 0; i < currentitemsLength; i++)
+		for (int i = 0; i < currentItemsLength; i++)
 		{
 			totalPrice = totalPrice.add(items[i].getPrice());
 		}
@@ -80,7 +80,7 @@ public class Bin implements BinType {
 	
 	public int getNoOfItems()
 	{
-		return currentitemsLength;
+		return currentItemsLength;
 	}
 	
 	/**

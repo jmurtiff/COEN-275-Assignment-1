@@ -64,6 +64,7 @@ public class Q2TestCase {
 		Bin bin3 = new SmartBin();
 		bin3.addItem(sm4);
 		
+		//Yes, you can add fragile SaleItems to bin3. 
 		System.out.println (bin3.showDetails());
 		
 		

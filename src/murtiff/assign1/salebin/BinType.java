@@ -11,7 +11,7 @@ import murtiff.assign1.money.USMoney;
  */
 public interface BinType {
 	
-	public void addItem (ItemType item);
+	public void addItem(ItemType item);
 	public USMoney calculatePrice();
 	public double getWeight();
 	public int getNoOfItems();

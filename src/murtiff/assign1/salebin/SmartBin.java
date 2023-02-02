@@ -19,7 +19,7 @@ public class SmartBin extends Bin{
 	public SmartBin()
 	{
 		items = new ItemType [10];
-		currentitemsLength = 0;
+		currentItemsLength = 0;
 		binNumber = "SM" + generateBinNumber();
 		label = "";
 	}
@@ -37,12 +37,12 @@ public class SmartBin extends Bin{
 		this.label = label;
 	}
 	
-	public void addItem (ItemType item)
+	public void addItem(ItemType item)
 	{
 		if(item.getWeight() + getWeight() <= maxWeight)
 		{
-			items[currentitemsLength] = item;
-			currentitemsLength = currentitemsLength + 1;
+			items[currentItemsLength] = item;
+			currentItemsLength = currentItemsLength + 1;
 			if(item.isFragile())
 			{
 				setLabel("Fragile - Handle with Care");
@@ -53,7 +53,7 @@ public class SmartBin extends Bin{
 	public USMoney calculatePrice()
 	{
 		USMoney totalPrice = new USMoney(0,0);
-		for (int i = 0; i < currentitemsLength; i++)
+		for (int i = 0; i < currentItemsLength; i++)
 		{
 			totalPrice = totalPrice.add(items[i].getPrice());
 			if(items[i].isFragile())

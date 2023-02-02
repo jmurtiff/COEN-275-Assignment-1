@@ -18,9 +18,9 @@ public class SaleItem implements ItemType{
 	
 	public SaleItem(String itemName, USMoney price, double weight, boolean fragile) 
 	{
-		this.weight = weight;
 		this.itemName = itemName;
 		this.price = price;
+		this.weight = weight;
 		this.fragile = fragile;
 	}
 	
