@@ -20,6 +20,7 @@ public class Bin implements BinType {
 	
 	protected static int binCounter = 0;
 	
+	//
 	public Bin()
 	{
 		items = new ItemType [10];
