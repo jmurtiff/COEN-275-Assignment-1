@@ -2,17 +2,23 @@
  * 
  */
 package murtiff.assign1.q1;
+
+//In order to use the class methods of USMoney outside of its
+//package we have to import it into this java file.
 import murtiff.assign1.money.USMoney;
 
 /**
- * @author Jordan
+ * @author Jordan Murtiff
  *
  */
 public class USMoneyTester {
 
 	/**
-	 * @param args
-	 */
+	 * The main function for USMoneyTester is taken directly from the 
+	 * original assignment. Both the default constructor and the parameterized
+	 * constructor is called here, as well as both setters and getters (for dollars
+	 * and cents) and finally both add() and addTo() functions.
+	**/
 	public static void main(String[] args) {
 		USMoney amt1 = new USMoney ();
 		System.out.println (amt1);
