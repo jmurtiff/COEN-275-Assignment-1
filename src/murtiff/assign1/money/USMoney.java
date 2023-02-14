@@ -1,6 +1,3 @@
-/**
- * 
- */
 package murtiff.assign1.money;
 
 /**
@@ -50,7 +47,13 @@ public class USMoney {
 	
 	/**
 	* This function is a setter that takes in an integer and sets
-	* the number of dollars to be equal to the passed value.
+	* the number of dollars to be equal to the passed value. In 
+	* this case I made the assumption that when you set the # of dollars,
+	* it does not take into account any previous balance and only swaps the current 
+	* value of dollars with the new value of dollars.
+	* For example, if we have $1.50 and we call setDollars(3) then we end
+	* up with $3.50 and not $1.50 + $3.00 = $4.50
+	* This isn't clear given the assignment so I am using my best judgment here.
 	*/
 	public void setDollars(int dollars)
 	{
@@ -135,14 +138,15 @@ public class USMoney {
 	}
 	
 	/**
-	* Overriding the toString function, which returns a string
+	* Overriding the toString function, which returns a concatenated string
 	* that is the value of dollars and cents in standard format. 
 	* If the value of cents is less than 10, then we have to add a 
 	* leading 0 in front of the value of cents in order to return
-	* the standard form.
+	* the string in standard form.
 	* For example: 17 dollars and 2 cents would end up as $17.2 
 	* which may be interpreted as $17.20 and not $17.02, so we need
-	* to add a leading 0 in order to correct 
+	* to add a leading 0 in order to correctly display the correct
+	* value for the number of cents.
 	*/
 	public String toString()
 	{
